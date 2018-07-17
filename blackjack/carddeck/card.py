@@ -40,4 +40,10 @@ class Card:
     def get_value(self):
         """Returns an integer coresponding with the card value"""
         value = Card.rank_values.index(self.rank)
-        return value if value <= 10 else 10
+        # Adjust for Jack, Queen and King
+        if value > 10:
+            value = 10
+        # Adjust Aces to 11
+        elif value == 1:
+            value += 10
+        return value

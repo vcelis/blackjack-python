@@ -5,10 +5,11 @@ from blackjack.game import Game
 
 def draw_table(game):
     print('\n'*100)
-    print(f'Current bet: {game.player.bet}\n')
-    print('----------PLAYER----------\n')
+    print(f'Current bet: {game.player.bet}')
+    print(f'Balance: {game.player.balance}\n')
+    print(f'----------PLAYER----------{game.player.hand.value}\n')
     print(game.player.hand)
-    print('----------DEALER----------\n')
+    print(f'----------DEALER----------{game.dealer.hand.value}\n')
     print(game.dealer.hand)
 
 

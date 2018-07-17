@@ -13,8 +13,7 @@ class Hand:
     def __init__(self):
         self.cards = list()
         self.value = 0
-        self.soft_value = 0
-        self.blackjack = False
+        self.aces = 0
         self.bust = False
 
     def __str__(self):
@@ -46,15 +45,15 @@ class Hand:
         self.cards.append(card)
         # Add value of card to self.value
         self.value += card.get_value()
-        # Calculate soft_value if ace in hand
-        if card.get_value() == 1:
-            self.soft_value += 11
-        else:
-            self.soft_value += card.get_value()
-        # Check for blackjack and toggle self.blackjack
-        self.blackjack = self.value == 21 or self.soft_value == 21
+        # Track aces
+        if card.get_value() == 11:
+            self.aces += 1
+        # Adjust value for aces if needed
+        while self.value > 21 and self.aces:
+            self.value -= 10
+            self.aces -= 10
         # Check for bust and toggle self.bust
-        self.bust = self.value > 21 and self.soft_value > 21
+        self.bust = self.value > 21
 
     def clear(self):
         self.__init__()
