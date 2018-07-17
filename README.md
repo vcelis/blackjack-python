@@ -17,7 +17,7 @@
 <h2>Notes</h2>
 <p>Currently an Ace is only counted as a value of 1.</p>
 
-<h2>License</h2>
+<h2>TODO</h2>
 <p>Need to implement 1 and 11 values for Ace<p>
 
 <h2>License</h2>
