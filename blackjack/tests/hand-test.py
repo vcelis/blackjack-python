@@ -1,6 +1,6 @@
 import unittest
-from player.hand import Hand
-from carddeck.card import Card
+from ..player.hand import Hand
+from ..carddeck.card import Card
 
 
 class HandTest(unittest.TestCase):
