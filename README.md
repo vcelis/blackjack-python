@@ -14,12 +14,6 @@
 <p>To run unit tests run the following command in the root directory:</p>
 <p>python -m blackjack.tests.{TESTFILE}</p>
 
-<h2>Notes</h2>
-<p>Currently an Ace is only counted as a value of 1.</p>
-
-<h2>TODO</h2>
-<p>Need to implement 1 and 11 values for Ace<p>
-
 <h2>License</h2>
 <p>The MIT License (MIT)</p>
 
